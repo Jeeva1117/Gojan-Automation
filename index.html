@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CENTRE FOR EMBEDDED SYSTEM AND IOT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-icon"></div>
+            <div>
+                <h1>CENTRE FOR EMBEDDED SYSTEM AND IOT</h1>
+                <p>Control Panel</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="status-card">
+            <div class="status-info">
+                <h2>System Status</h2>
+                <p id="status-text">0 of 7 switches active</p>
+            </div>
+            <div class="master-controls">
+                <button id="all-on-btn" class="btn btn-green">⚡ All On</button>
+                <button id="all-off-btn" class="btn btn-red">⏻ All Off</button>
+            </div>
+        </div>
+
+        <div class="switches-grid" id="switches-grid">
+            <!-- Switches will appear here -->
+        </div>
+    </main>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+    <!-- Firebase Initialization -->
+    <script>
+      // Your Firebase configuration
+      const firebaseConfig = {
+        apiKey: "umALmTiQFcwRKjoZ95bfQQEBM0WXurGrelIN9Y6W",
+        databaseURL: "https://eiot-d896c-default-rtdb.asia-southeast1.firebasedatabase.app/",
+        projectId: "eiot-d896c",
+        storageBucket: "Centre for embedded systerm and IOT",
+        messagingSenderId: "773420572335"
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.database();
+
+      // Example: create a reference to test data
+      // db.ref('test').set({status: 'Firebase Connected'});
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
